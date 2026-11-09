@@ -1,0 +1,16 @@
+machine_type,air_temp_k,proc_temp_k,rot_speed_rpm,torque_nm,tool_wear_min,predicted_failure_type,prob_No Failure,prob_Heat Dissipation Failure,prob_Overstrain Failure,prob_Power Failure,prob_Tool Wear Failure,prob_Random Failures
+M,298.1,308.6,1551,42.8,0,No Failure,1.0,0.0,0.0,0.0,0.0,0.0
+L,298.9,309.1,2861,4.6,143,Power Failure,0.0,0.0,0.0,1.0,0.0,0.0
+L,298.9,309.0,1410,65.7,191,Power Failure,0.0,0.0,0.0,1.0,0.0,0.0
+L,298.8,308.9,1455,41.3,208,Tool Wear Failure,0.0003,0.0,0.0,0.0,0.9997,0.0
+L,298.4,308.2,1282,60.7,216,Overstrain Failure,0.0,0.0,1.0,0.0,0.0,0.0
+M,298.2,308.5,2678,10.7,86,Power Failure,0.0,0.0,0.0,1.0,0.0,0.0
+M,298.4,308.7,1421,60.7,119,Power Failure,0.0,0.0,0.0,1.0,0.0,0.0
+L,298.0,308.2,1348,58.8,202,Overstrain Failure,0.0,0.0,1.0,0.0,0.0,0.0
+M,297.8,308.3,1567,35.6,131,No Failure,1.0,0.0,0.0,0.0,0.0,0.0
+L,297.5,308.3,2564,12.8,127,Power Failure,0.0,0.0,0.0,1.0,0.0,0.0
+L,297.4,308.7,2874,4.2,118,Power Failure,0.0,0.0,0.0,1.0,0.0,0.0
+L,297.9,309.8,1336,71.6,31,Power Failure,0.0,0.0,0.0,1.0,0.0,0.0
+M,295.8,306.3,1235,76.2,89,Power Failure,0.0,0.0,0.0,1.0,0.0,0.0
+L,297.5,309.1,1611,30.2,211,No Failure,1.0,0.0,0.0,0.0,0.0,0.0
+L,296.6,308.0,1978,22.3,208,No Failure,1.0,0.0,0.0,0.0,0.0,0.0

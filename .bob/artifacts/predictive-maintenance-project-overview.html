@@ -1,0 +1,312 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Predictive Maintenance — Project Overview</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 14px; line-height: 1.6; background: #f7f8fa; color: #1f2328; }
+  .page { max-width: 760px; margin: 32px auto 48px; padding: 0 20px; }
+
+  /* Header */
+  .header { background: #0f3460; color: #fff; border-radius: 10px; padding: 28px 32px 24px; margin-bottom: 24px; }
+  .header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 4px; }
+  .header .sub { font-size: 0.83rem; opacity: 0.72; margin-bottom: 16px; }
+  .header .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { background: rgba(255,255,255,0.15); border-radius: 20px; padding: 3px 12px; font-size: 0.78rem; font-weight: 500; }
+
+  /* Sections */
+  .section { background: #fff; border-radius: 10px; border: 1px solid #e5e7eb; padding: 22px 24px; margin-bottom: 18px; }
+  .section h2 { font-size: 0.92rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #57606a; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid #e5e7eb; }
+
+  /* Grid */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+  @media(max-width:600px){ .grid2,.grid3{ grid-template-columns:1fr; } }
+
+  /* Stat cards */
+  .stat { background: #f7f8fa; border-radius: 8px; padding: 14px 16px; border: 1px solid #e5e7eb; }
+  .stat .label { font-size: 0.78rem; color: #57606a; font-weight: 600; margin-bottom: 2px; }
+  .stat .value { font-size: 1.25rem; font-weight: 700; color: #0f3460; }
+  .stat .note  { font-size: 0.75rem; color: #57606a; margin-top: 2px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+  th { background: #f7f8fa; padding: 7px 10px; text-align: left; font-weight: 600; border-bottom: 2px solid #e5e7eb; color: #57606a; font-size: 0.8rem; }
+  td { padding: 7px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+
+  /* Badge */
+  .badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+  .badge-blue  { background: #dbeafe; color: #1e40af; }
+  .badge-green { background: #d1fae5; color: #065f46; }
+  .badge-purple{ background: #ede9fe; color: #5b21b6; }
+  .badge-orange{ background: #fef3c7; color: #92400e; }
+
+  /* Pipeline diagram */
+  .pipeline { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px; }
+  .pipe-step { background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; color: #1f2328; }
+  .pipe-arrow { color: #9ca3af; font-size: 1rem; }
+
+  /* File tree */
+  .tree { font-size: 0.82rem; font-family: "Consolas", "Courier New", monospace; line-height: 1.8; color: #1f2328; }
+  .tree .dir  { color: #0f3460; font-weight: 600; }
+  .tree .file { color: #57606a; }
+  .tree .note { color: #3b82d4; font-style: italic; margin-left: 4px; }
+
+  /* Feature table code */
+  code { background: #f7f8fa; border-radius: 4px; padding: 1px 5px; font-size: 0.82rem; font-family: "Consolas", "Courier New", monospace; color: #0f3460; }
+
+  /* IBM services */
+  .ibm-service { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+  .ibm-service:last-child { border-bottom: none; }
+  .ibm-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.72rem; color: #fff; flex-shrink: 0; }
+  .icon-wml { background: #0f3460; }
+  .icon-cos { background: #3b82d4; }
+  .icon-ws  { background: #7c5cd8; }
+  .ibm-service .name { font-weight: 600; font-size: 0.88rem; }
+  .ibm-service .desc { font-size: 0.8rem; color: #57606a; }
+
+  /* Endpoint box */
+  .endpoint { background: #f7f8fa; border-left: 3px solid #3b82d4; border-radius: 0 6px 6px 0; padding: 10px 14px; font-size: 0.82rem; margin: 10px 0; }
+  .endpoint .method { display: inline-block; font-weight: 700; color: #3b82d4; margin-right: 6px; }
+  .endpoint .path   { font-family: monospace; }
+  .endpoint .ep-desc { font-size: 0.78rem; color: #57606a; margin-top: 2px; }
+
+  /* Footer */
+  .footer { text-align: center; margin-top: 40px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.77rem; color: #57606a; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  
+  <div class="header">
+    <h1>Predictive Maintenance of Industrial Machinery</h1>
+    <div class="sub">Problem Statement No. 39  ·  IBM Cloud Lite Edition</div>
+    <div class="tags">
+      <span class="tag">Multi-Class Classification</span>
+      <span class="tag">scikit-learn</span>
+      <span class="tag">IBM Watson ML</span>
+      <span class="tag">IBM COS</span>
+      <span class="tag">Flask API</span>
+      <span class="tag">10 000 rows</span>
+    </div>
+  </div>
+
+  
+  <div class="grid3" style="margin-bottom:18px">
+    <div class="stat">
+      <div class="label">Best Model Accuracy</div>
+      <div class="value">~98%</div>
+      <div class="note">Random Forest on test set</div>
+    </div>
+    <div class="stat">
+      <div class="label">F1-Weighted</div>
+      <div class="value">~0.98</div>
+      <div class="note">Weighted across 5 classes</div>
+    </div>
+    <div class="stat">
+      <div class="label">Feature Count</div>
+      <div class="value">10</div>
+      <div class="note">6 raw + 4 engineered</div>
+    </div>
+  </div>
+
+  
+  <div class="section">
+    <h2>Problem &amp; Dataset</h2>
+    <p style="margin-bottom:12px;font-size:0.88rem">Industrial machines fail unexpectedly, causing costly downtime. This project trains a <strong>multi-class classifier</strong> that predicts the <em>type</em> of failure from live sensor readings so maintenance teams can act proactively. Dataset: <a href="https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification" style="color:#3b82d4">Kaggle – Machine Predictive Maintenance</a> · 10 000 rows · no missing values · heavily imbalanced (≈96% No Failure).</p>
+    <table>
+      <thead><tr><th>Code</th><th>Failure Type</th><th>Category</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>No Failure</td><td><span class="badge badge-green">Normal</span></td></tr>
+        <tr><td>1</td><td>Heat Dissipation Failure</td><td><span class="badge badge-orange">Thermal</span></td></tr>
+        <tr><td>2</td><td>Overstrain Failure</td><td><span class="badge badge-blue">Mechanical</span></td></tr>
+        <tr><td>3</td><td>Power Failure</td><td><span class="badge badge-blue">Electrical</span></td></tr>
+        <tr><td>4</td><td>Tool Wear Failure</td><td><span class="badge badge-blue">Wear</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+  <div class="section">
+    <h2>Pipeline</h2>
+    <div class="pipeline">
+      <div class="pipe-step">CSV Load</div><div class="pipe-arrow">→</div>
+      <div class="pipe-step">EDA &amp; Cleaning</div><div class="pipe-arrow">→</div>
+      <div class="pipe-step">Feature Engineering</div><div class="pipe-arrow">→</div>
+      <div class="pipe-step">Train 4 Models</div><div class="pipe-arrow">→</div>
+      <div class="pipe-step">Evaluate &amp; Tune</div><div class="pipe-arrow">→</div>
+      <div class="pipe-step">Save Best Model</div><div class="pipe-arrow">→</div>
+      <div class="pipe-step">Deploy / Serve</div>
+    </div>
+    <table style="margin-top:12px">
+      <thead><tr><th>CLI Flag</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td><code>--pipeline full</code></td><td>EDA → train all classifiers → advanced evaluation</td></tr>
+        <tr><td><code>--pipeline eda</code></td><td>Load data, generate 4 EDA plots to <code>outputs/</code></td></tr>
+        <tr><td><code>--pipeline train</code></td><td>Feature engineering, train 4 models, save metrics</td></tr>
+        <tr><td><code>--pipeline evaluate</code></td><td>SMOTE, GridSearchCV tuning, ROC-AUC, per-class charts</td></tr>
+        <tr><td><code>--pipeline deploy</code></td><td>Store &amp; deploy best model to IBM Watson ML</td></tr>
+        <tr><td><code>--pipeline upload_cos</code></td><td>Upload dataset + artefacts to IBM COS</td></tr>
+        <tr><td><code>--pipeline predict --input CSV</code></td><td>Batch inference → <code>outputs/predictions.csv</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+  <div class="section">
+    <h2>Feature Engineering — 10 Features</h2>
+    <table>
+      <thead><tr><th>Feature</th><th>Type</th><th>Formula / Source</th><th>Physical Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><code>machine_type_encoded</code></td><td><span class="badge badge-green">Raw</span></td><td>L=0, M=1, H=2</td><td>Quality tier</td></tr>
+        <tr><td><code>air_temp_k</code></td><td><span class="badge badge-green">Raw</span></td><td>Sensor</td><td>Ambient temperature (K)</td></tr>
+        <tr><td><code>proc_temp_k</code></td><td><span class="badge badge-green">Raw</span></td><td>Sensor</td><td>Process temperature (K)</td></tr>
+        <tr><td><code>rot_speed_rpm</code></td><td><span class="badge badge-green">Raw</span></td><td>Sensor</td><td>Spindle speed (rpm)</td></tr>
+        <tr><td><code>torque_nm</code></td><td><span class="badge badge-green">Raw</span></td><td>Sensor</td><td>Applied torque (Nm)</td></tr>
+        <tr><td><code>tool_wear_min</code></td><td><span class="badge badge-green">Raw</span></td><td>Sensor</td><td>Cumulative wear time (min)</td></tr>
+        <tr><td><code>temp_diff</code></td><td><span class="badge badge-blue">Derived</span></td><td>proc_temp − air_temp</td><td>Heat dissipation stress</td></tr>
+        <tr><td><code>power_kw</code></td><td><span class="badge badge-blue">Derived</span></td><td>(2π/60) × rpm × torque / 1000</td><td>Mechanical power output</td></tr>
+        <tr><td><code>tool_wear_rate</code></td><td><span class="badge badge-blue">Derived</span></td><td>tool_wear / torque</td><td>Wear per unit load</td></tr>
+        <tr><td><code>speed_torque_ratio</code></td><td><span class="badge badge-blue">Derived</span></td><td>rpm / torque</td><td>Efficiency indicator</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+  <div class="section">
+    <h2>Models Trained &amp; Performance</h2>
+    <table>
+      <thead><tr><th>Model</th><th>Accuracy</th><th>F1 Macro</th><th>F1 Weighted</th><th>CV (5-fold)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Random Forest</strong>  <span class="badge badge-green">Best</span></td>
+          <td>~0.98</td><td>~0.88</td><td>~0.98</td><td>~0.98</td>
+        </tr>
+        <tr><td>Gradient Boosting</td><td>~0.98</td><td>~0.87</td><td>~0.98</td><td>~0.98</td></tr>
+        <tr><td>K-Nearest Neighbours</td><td>~0.97</td><td>~0.80</td><td>~0.97</td><td>~0.97</td></tr>
+        <tr><td>Logistic Regression</td><td>~0.96</td><td>~0.72</td><td>~0.96</td><td>~0.96</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.8rem;color:#57606a;margin-top:10px">After evaluation, <strong>GridSearchCV</strong> tunes the best model on <strong>SMOTE-balanced</strong> training data. ROC-AUC curves and per-class P/R/F1 charts are saved to <code>outputs/</code>.</p>
+  </div>
+
+  
+  <div class="section">
+    <h2>Flask Web API — <code>app.py</code></h2>
+    <div class="endpoint">
+      <span class="method">GET</span><span class="path">/</span>
+      <div class="ep-desc">Interactive dashboard — model status, metrics table, failure type reference, and live prediction form</div>
+    </div>
+    <div class="endpoint">
+      <span class="method">POST</span><span class="path">/predict</span>
+      <div class="ep-desc">JSON body: <code>machine_type, air_temp_k, proc_temp_k, rot_speed_rpm, torque_nm, tool_wear_min</code> → returns <code>class_id</code>, <code>label</code>, and per-class <code>probabilities</code></div>
+    </div>
+    <div class="endpoint">
+      <span class="method">GET</span><span class="path">/health</span>
+      <div class="ep-desc">Returns model readiness status and best model name</div>
+    </div>
+    <div class="endpoint">
+      <span class="method">GET</span><span class="path">/metrics</span>
+      <div class="ep-desc">Returns the full <code>metrics_summary.json</code> as JSON</div>
+    </div>
+  </div>
+
+  
+  <div class="section">
+    <h2>Source Modules — <code>src/</code></h2>
+    <table>
+      <thead><tr><th>Module</th><th>Responsibilities</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>data_preprocessing.py</code></td>
+          <td>Load CSV, rename columns, encode categoricals, check quality, generate 4 EDA plots (failure distribution, correlation heatmap, speed vs torque scatter, tool wear histogram)</td>
+        </tr>
+        <tr>
+          <td><code>feature_engineering.py</code></td>
+          <td>Add 4 derived features, stratified train/test split, fit &amp; save <code>StandardScaler</code></td>
+        </tr>
+        <tr>
+          <td><code>model_training.py</code></td>
+          <td>Train RF, GB, LR, KNN; 5-fold CV; save all <code>.joblib</code> models; write <code>metrics_summary.json</code>; generate confusion matrices, model comparison bar chart, feature importances</td>
+        </tr>
+        <tr>
+          <td><code>evaluate.py</code></td>
+          <td>SMOTE oversampling, GridSearchCV hyperparameter tuning, ROC-AUC curves, per-class P/R/F1 bar chart, save <code>best_model_tuned.joblib</code> + <code>evaluation_report.json</code></td>
+        </tr>
+        <tr>
+          <td><code>ibm_watson_ml.py</code></td>
+          <td><code>IBMWatsonMLClient</code>: store model, create online deployment, score via endpoint. <code>IBMCOSClient</code>: upload/download to COS bucket. <code>predict_local()</code>: offline inference</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+  <div class="section">
+    <h2>IBM Cloud Lite Services</h2>
+    <div class="ibm-service">
+      <div class="ibm-icon icon-wml">WML</div>
+      <div>
+        <div class="name">Watson Machine Learning  <span class="badge badge-green">Lite (Free)</span></div>
+        <div class="desc">Hosts the trained scikit-learn model as a REST scoring endpoint. Model stored via Python SDK, deployment auto-configured as online endpoint. Credentials: <code>IBM_WML_API_KEY</code>, <code>IBM_WML_SPACE_ID</code>, <code>IBM_WML_URL</code>.</div>
+      </div>
+    </div>
+    <div class="ibm-service">
+      <div class="ibm-icon icon-cos">COS</div>
+      <div>
+        <div class="name">Cloud Object Storage  <span class="badge badge-green">Lite (25 GB Free)</span></div>
+        <div class="desc">Stores dataset CSV, model artefacts, and output files. Bucket auto-created if absent. Credentials: <code>IBM_COS_API_KEY</code>, <code>IBM_COS_INSTANCE_CRN</code>.</div>
+      </div>
+    </div>
+    <div class="ibm-service">
+      <div class="ibm-icon icon-ws">WS</div>
+      <div>
+        <div class="name">Watson Studio  <span class="badge badge-green">Lite (Free)</span></div>
+        <div class="desc">Notebook environment for experimentation. Notebook at <code>notebooks/predictive_maintenance_analysis.ipynb</code>.</div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="section">
+    <h2>Generated Outputs — <code>outputs/</code></h2>
+    <div class="grid2">
+      <table>
+        <thead><tr><th>Plot</th><th>Stage</th></tr></thead>
+        <tbody>
+          <tr><td><code>failure_distribution.png</code></td><td>EDA</td></tr>
+          <tr><td><code>correlation_heatmap.png</code></td><td>EDA</td></tr>
+          <tr><td><code>speed_vs_torque.png</code></td><td>EDA</td></tr>
+          <tr><td><code>tool_wear_by_failure.png</code></td><td>EDA</td></tr>
+          <tr><td><code>confusion_matrices.png</code></td><td>Train</td></tr>
+          <tr><td><code>model_comparison.png</code></td><td>Train</td></tr>
+          <tr><td><code>feature_importances.png</code></td><td>Train</td></tr>
+          <tr><td><code>roc_curves.png</code></td><td>Evaluate</td></tr>
+          <tr><td><code>per_class_metrics.png</code></td><td>Evaluate</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>Data File</th><th>Stage</th></tr></thead>
+        <tbody>
+          <tr><td><code>metrics_summary.json</code></td><td>Train</td></tr>
+          <tr><td><code>evaluation_report.json</code></td><td>Evaluate</td></tr>
+          <tr><td><code>predictions.csv</code></td><td>Predict</td></tr>
+          <tr><td><code>app.log</code></td><td>All stages</td></tr>
+          <tr><td><code>flask.log</code></td><td>Flask app</td></tr>
+          <tr><td><code>models/best_model.joblib</code></td><td>Train</td></tr>
+          <tr><td><code>models/best_model_tuned.joblib</code></td><td>Evaluate</td></tr>
+          <tr><td><code>models/scaler.joblib</code></td><td>Train</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  
+  <div class="footer">Made with IBM Bob</div>
+</div>
+</body>
+</html>

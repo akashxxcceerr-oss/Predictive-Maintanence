@@ -1,0 +1,16 @@
+UDI,Product ID,Type,Air temperature [K],Process temperature [K],Rotational speed [rpm],Torque [Nm],Tool wear [min],Target,Failure Type
+1,M14860,M,298.1,308.6,1551,42.8,0,0,No Failure
+51,L47230,L,298.9,309.1,2861,4.6,143,1,Power Failure
+70,L47249,L,298.9,309.0,1410,65.7,191,1,Power Failure
+78,L47257,L,298.8,308.9,1455,41.3,208,1,Tool Wear Failure
+161,L47340,L,298.4,308.2,1282,60.7,216,1,Overstrain Failure
+195,M15054,M,298.2,308.5,2678,10.7,86,1,Power Failure
+208,M15067,M,298.4,308.7,1421,60.7,119,1,Power Failure
+243,L47422,L,298.0,308.2,1348,58.8,202,1,Overstrain Failure
+300,M15159,M,297.8,308.3,1567,35.6,131,0,No Failure
+381,L47560,L,297.5,308.3,2564,12.8,127,1,Power Failure
+464,L47643,L,297.4,308.7,2874,4.2,118,1,Power Failure
+604,L47783,L,297.9,309.8,1336,71.6,31,1,Power Failure
+881,M15740,M,295.8,306.3,1235,76.2,89,1,Power Failure
+500,L47679,L,297.5,309.1,1611,30.2,211,0,No Failure
+750,L47929,L,296.6,308.0,1978,22.3,208,0,No Failure

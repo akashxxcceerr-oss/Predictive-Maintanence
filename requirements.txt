@@ -1,0 +1,28 @@
+# ─── Core Data & ML ────────────────────────────────────────────────────────
+pandas>=2.0.0
+numpy>=1.26.0
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# ─── Visualisation ─────────────────────────────────────────────────────────
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# ─── Web application ───────────────────────────────────────────────────────
+flask>=3.0.0
+
+# ─── Environment variables ─────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ─── Class imbalance handling (used by src/evaluate.py) ────────────────────
+imbalanced-learn>=0.12.0
+
+# ─── IBM Cloud Lite Services ───────────────────────────────────────────────
+# Watson Machine Learning SDK (free Lite plan)
+ibm-watson-machine-learning>=1.0.327
+
+# IBM Cloud Object Storage SDK (free Lite tier – 25 GB)
+ibm-cos-sdk>=2.13.0
+
+# IBM Cloud authentication helper
+ibm-cloud-sdk-core>=3.18.0
